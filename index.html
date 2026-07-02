@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TEMPUS_NET // Armory Node</title>
+    <meta
+      name="description"
+      content="TEMPUS_NET is the public armory archive and development network for Tempus Industries modding projects."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="node-panel" aria-label="TEMPUS_NET navigation">
+        <div class="brand-block">
+          <p class="eyebrow">guest uplink</p>
+          <h1>TEMPUS_NET</h1>
+          <p class="node-id">NODE 07 // ARMORY ARCHIVE</p>
+        </div>
+
+        <nav class="file-tree">
+          <a href="#armory" data-section-link>armory_index</a>
+          <a href="#field-logs" data-section-link>field_logs</a>
+          <a href="#framework" data-section-link>framework_notes</a>
+          <a href="#media" data-section-link>media_archive</a>
+          <a href="#releases" data-section-link>release_terminal</a>
+        </nav>
+
+        <div class="status-stack" aria-label="Network status">
+          <div>
+            <span>AUTH</span>
+            <strong>GUEST</strong>
+          </div>
+          <div>
+            <span>ARCHIVE</span>
+            <strong>ONLINE</strong>
+          </div>
+          <div>
+            <span>FRAMEWORK</span>
+            <strong>QUARANTINED</strong>
+          </div>
+          <div>
+            <span>LOCAL TIME</span>
+            <strong id="clock">--:--:--</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="terminal-surface">
+        <section class="boot-panel" aria-labelledby="boot-title">
+          <div class="boot-copy">
+            <p class="eyebrow">tempus industries internal mirror</p>
+            <h2 id="boot-title">BLACKSITE ARMORY ACCESS</h2>
+            <p>
+              Public development records, field notes, showcases, and release
+              mirrors for Tempus weapon systems. Unstable frameworks remain
+              sealed until they stop trying to bite the operator.
+            </p>
+          </div>
+          <div class="boot-widgets">
+            <div class="terminal-card" aria-label="Connection log">
+              <div class="terminal-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <b>session.log</b>
+              </div>
+              <ol id="boot-log">
+                <li>&gt; connecting to TEMPUS_NET...</li>
+                <li>&gt; guest authentication accepted</li>
+                <li>&gt; armory index mounted</li>
+                <li>&gt; field logs restored</li>
+                <li>&gt; framework packages quarantined</li>
+              </ol>
+            </div>
+
+            <aside class="weather-widget" aria-labelledby="weather-title">
+              <div class="weather-topline">
+                <span>NC-WX // LIVE</span>
+                <strong id="weather-time">--:--</strong>
+              </div>
+              <h3 id="weather-title">Night City Weather</h3>
+              <div class="weather-reading">
+                <strong>29°C</strong>
+                <span>acid haze</span>
+              </div>
+              <dl>
+                <div><dt>District</dt><dd>Watson relay</dd></div>
+                <div><dt>Wind</dt><dd>W 18 km/h</dd></div>
+                <div><dt>Air quality</dt><dd>hostile</dd></div>
+                <div><dt>Advisory</dt><dd>optics wipe recommended</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </section>
+
+        <section id="armory" class="content-section" aria-labelledby="armory-title">
+          <div class="section-heading">
+            <p class="eyebrow">/armory_index</p>
+            <h2 id="armory-title">Weapon Records</h2>
+          </div>
+
+          <div class="record-grid">
+            <article class="record-card redacted-card">
+              <div class="record-header">
+                <span>WEAPON_RECORD</span>
+                <strong><span class="redaction redaction-title w-85" aria-label="redacted"></span></strong>
+              </div>
+              <dl>
+                <div><dt>Status</dt><dd><span class="redaction w-45" aria-label="redacted"></span></dd></div>
+                <div><dt>Platform</dt><dd><span class="redaction w-72" aria-label="redacted"></span></dd></div>
+                <div><dt>Animation donor</dt><dd><span class="redaction w-62" aria-label="redacted"></span></dd></div>
+                <div><dt>Pipeline</dt><dd><span class="redaction w-38" aria-label="redacted"></span></dd></div>
+              </dl>
+            </article>
+
+            <article class="record-card redacted-card">
+              <div class="record-header">
+                <span>WEAPON_RECORD</span>
+                <strong><span class="redaction redaction-title w-70" aria-label="redacted"></span></strong>
+              </div>
+              <dl>
+                <div><dt>Status</dt><dd><span class="redaction w-64" aria-label="redacted"></span></dd></div>
+                <div><dt>Platform</dt><dd><span class="redaction w-32" aria-label="redacted"></span></dd></div>
+                <div><dt>Variants</dt><dd><span class="redaction w-78" aria-label="redacted"></span></dd></div>
+                <div><dt>Routing</dt><dd><span class="redaction w-55" aria-label="redacted"></span></dd></div>
+              </dl>
+            </article>
+
+            <article class="record-card redacted-card">
+              <div class="record-header">
+                <span>WEAPON_RECORD</span>
+                <strong><span class="redaction redaction-title w-48" aria-label="redacted"></span></strong>
+              </div>
+              <dl>
+                <div><dt>Status</dt><dd><span class="redaction w-58" aria-label="redacted"></span></dd></div>
+                <div><dt>Platform</dt><dd><span class="redaction w-40" aria-label="redacted"></span></dd></div>
+                <div><dt>Notes</dt><dd><span class="redaction w-86" aria-label="redacted"></span></dd></div>
+                <div><dt>Release</dt><dd><span class="redaction w-50" aria-label="redacted"></span></dd></div>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <section id="field-logs" class="content-section" aria-labelledby="logs-title">
+          <div class="section-heading">
+            <p class="eyebrow">/field_logs</p>
+            <h2 id="logs-title">Recovered Logs</h2>
+          </div>
+
+          <div class="log-list">
+            <article>
+              <time datetime="2026-07-01">2026.07.01</time>
+              <h3>SIMD Reload Pipeline Stabilized</h3>
+              <p>
+                Targeted import preserved the original animation bank and updated
+                one SIMD clip at a time. The good signature is now documented:
+                one updated, zero new, originals kept.
+              </p>
+            </article>
+            <article>
+              <time datetime="2026-06-28">2026.06.28</time>
+              <h3>Tactical Stance Calibration</h3>
+              <p>
+                Canted aiming moved from guesswork into live tuning. CET offsets
+                now handle the sight line while animation poses provide the stance.
+              </p>
+            </article>
+            <article>
+              <time datetime="2026-06-27">2026.06.27</time>
+              <h3>Attachment Modularity Pass</h3>
+              <p>
+                Canted rails, optics, and scope bones were separated into a
+                modular target so vanilla aiming systems stop fighting custom gear.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="framework" class="content-section split-section" aria-labelledby="framework-title">
+          <div class="section-heading">
+            <p class="eyebrow">/framework_notes</p>
+            <h2 id="framework-title">Framework State</h2>
+          </div>
+
+          <div class="framework-layout">
+            <div class="terminal-card compact">
+              <div class="terminal-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <b>mwf.status</b>
+              </div>
+              <pre><code>MWF_CORE          sealed
+TAC_STANCE        prototype stable
+MAGNIFIER_STATE   research
+ANIM_REGISTRY     planned
+PUBLIC_RELEASE    blocked until stable</code></pre>
+            </div>
+            <div class="note-panel">
+              <h3>Operating Rule</h3>
+              <p>
+                Public releases wait until the tools survive real weapon tests.
+                Scripts and frameworks stay internal while the system is still
+                learning how not to fold itself into modern art.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="media" class="content-section" aria-labelledby="media-title">
+          <div class="section-heading">
+            <p class="eyebrow">/media_archive</p>
+            <h2 id="media-title">Monitor Feeds</h2>
+          </div>
+
+          <div class="media-grid">
+            <figure class="redacted-feed" aria-label="Redacted monitor feed">
+              <div><span>NO SIGNAL</span></div>
+              <figcaption>FEED 01 // redacted capture</figcaption>
+            </figure>
+            <figure class="redacted-feed" aria-label="Redacted monitor feed">
+              <div><span>NO SIGNAL</span></div>
+              <figcaption>FEED 02 // redacted capture</figcaption>
+            </figure>
+            <figure class="redacted-feed" aria-label="Redacted monitor feed">
+              <div><span>NO SIGNAL</span></div>
+              <figcaption>FEED 03 // diagnostic capture sealed</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="releases" class="content-section" aria-labelledby="release-title">
+          <div class="section-heading">
+            <p class="eyebrow">/release_terminal</p>
+            <h2 id="release-title">Release Terminal</h2>
+          </div>
+
+          <div class="release-panel">
+            <div>
+              <h3>Public Package Policy</h3>
+              <p>
+                Releases mirror stable packages only. Internal tools, unfinished
+                frameworks, extracted assets, and volatile prototypes stay offline
+                until they earn their clearance.
+              </p>
+            </div>
+            <form class="command-line" id="command-form">
+              <label for="command-input">operator command</label>
+              <div>
+                <span>&gt;</span>
+                <input id="command-input" autocomplete="off" value="scan releases" />
+                <button type="submit">RUN</button>
+              </div>
+              <output id="command-output">No public packages staged.</output>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>

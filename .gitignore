@@ -1,0 +1,24 @@
+# Local preview artifacts
+snapshots/
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Dependency/build folders, if this becomes Astro or another static stack later
+node_modules/
+dist/
+.astro/
+
+# Do not commit packed/extracted game assets here
+*.archive
+*.anims
+*.mesh
+*.rig
+*.ent
+*.app
+*.xbm
+*.mlmask
