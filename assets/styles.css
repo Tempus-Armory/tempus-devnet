@@ -1,20 +1,22 @@
 :root {
   color-scheme: dark;
-  --bg: #060607;
-  --panel: rgba(14, 15, 16, 0.92);
-  --panel-strong: rgba(18, 19, 21, 0.96);
-  --line: rgba(48, 63, 82, 0.5);
-  --line-hot: rgba(154, 105, 43, 0.72);
-  --text: #b5b8ba;
-  --muted: #74787c;
-  --ghost: #b9bbbd;
-  --amber: #a86f2d;
-  --amber-hot: #c58b45;
-  --void: #101a27;
-  --void-hot: #3b5f86;
+  --bg: #101113;
+  --panel: rgba(27, 29, 31, 0.84);
+  --panel-strong: rgba(31, 33, 35, 0.9);
+  --line: rgba(96, 112, 128, 0.54);
+  --line-hot: rgba(191, 132, 64, 0.78);
+  --text: #d0d3d2;
+  --muted: #9aa09f;
+  --ghost: #ecefea;
+  --amber: #c7863e;
+  --amber-hot: #e2a45d;
+  --void: #182230;
+  --void-hot: #86abc9;
   --red: #b86158;
-  --shadow: rgba(28, 44, 63, 0.34);
-  --mono: "Cascadia Mono", "Consolas", "Lucida Console", monospace;
+  --shadow: rgba(119, 151, 178, 0.26);
+  --glass: rgba(226, 234, 238, 0.05);
+  --mono: "Glass TTY VT220", "Glass TTY", "VT323", "DEC Terminal Modern",
+    "Px437 IBM VGA 8x16", "Cascadia Mono", "Consolas", "Lucida Console", monospace;
 }
 
 * {
@@ -29,16 +31,16 @@ body {
   min-width: 320px;
   margin: 0;
   background:
-    linear-gradient(rgba(59, 95, 134, 0.026) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 95, 134, 0.018) 1px, transparent 1px),
-    radial-gradient(circle at 20% 10%, rgba(59, 95, 134, 0.07), transparent 32rem),
-    radial-gradient(circle at 80% 80%, rgba(168, 111, 45, 0.06), transparent 30rem),
+    radial-gradient(circle at 18% 8%, rgba(134, 171, 201, 0.14), transparent 34rem),
+    radial-gradient(circle at 86% 82%, rgba(226, 164, 93, 0.11), transparent 30rem),
+    linear-gradient(145deg, #17191b, #101113 56%, #191715),
     var(--bg);
-  background-size: 28px 28px, 28px 28px, auto, auto, auto;
   color: var(--text);
   font-family: var(--mono);
+  font-synthesis: none;
   letter-spacing: 0;
   overflow-x: hidden;
+  text-rendering: geometricPrecision;
 }
 
 body::before,
@@ -51,20 +53,25 @@ body::after {
 }
 
 body::before {
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(185, 187, 189, 0.024),
-    rgba(185, 187, 189, 0.024) 1px,
-    transparent 1px,
-    transparent 4px
-  );
-  mix-blend-mode: soft-light;
-  opacity: 0.42;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(236, 239, 234, 0.052),
+      rgba(236, 239, 234, 0.052) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.14) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 72% 48%, rgba(255, 255, 255, 0.09) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 42% 78%, rgba(0, 0, 0, 0.2) 0 1px, transparent 1.6px);
+  background-size: auto, 3px 3px, 5px 5px, 7px 7px;
+  mix-blend-mode: screen;
+  opacity: 0.28;
 }
 
 body::after {
-  border: 1px solid rgba(48, 63, 82, 0.24);
-  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(152, 170, 186, 0.2);
+  box-shadow: inset 0 0 58px rgba(0, 0, 0, 0.48);
 }
 
 a {
@@ -93,8 +100,10 @@ input {
   height: 100vh;
   padding: 28px 22px;
   border-right: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(5, 6, 9, 0.98), rgba(11, 13, 18, 0.94));
-  box-shadow: 16px 0 42px rgba(0, 0, 0, 0.32);
+  background:
+    linear-gradient(180deg, rgba(28, 31, 34, 0.96), rgba(19, 21, 24, 0.92)),
+    var(--panel);
+  box-shadow: 16px 0 42px rgba(0, 0, 0, 0.2);
 }
 
 .brand-block {
@@ -123,7 +132,9 @@ h1 {
   font-size: clamp(1.85rem, 3vw, 2.32rem);
   font-weight: 700;
   white-space: nowrap;
-  text-shadow: 0 0 22px var(--shadow);
+  text-shadow:
+    0 0 10px rgba(236, 239, 234, 0.16),
+    0 0 22px var(--shadow);
 }
 
 h2 {
@@ -131,7 +142,9 @@ h2 {
   color: var(--ghost);
   font-size: clamp(1.5rem, 2.8vw, 2.6rem);
   line-height: 1.05;
-  text-shadow: 0 0 18px var(--shadow);
+  text-shadow:
+    0 0 8px rgba(236, 239, 234, 0.12),
+    0 0 18px var(--shadow);
 }
 
 h3 {
@@ -161,7 +174,7 @@ p {
   min-height: 38px;
   padding: 10px 12px;
   border: 1px solid rgba(48, 63, 82, 0.52);
-  background: rgba(16, 26, 39, 0.34);
+  background: rgba(36, 45, 53, 0.42);
   color: var(--text);
   text-decoration: none;
 }
@@ -175,7 +188,7 @@ p {
 .file-tree a:focus-visible,
 .file-tree a.is-active {
   border-color: var(--line-hot);
-  background: rgba(154, 105, 43, 0.14);
+  background: rgba(191, 132, 64, 0.16);
   outline: none;
 }
 
@@ -216,8 +229,13 @@ p {
 .content-section {
   min-width: 0;
   border: 1px solid var(--line);
-  background: var(--panel);
-  box-shadow: 0 0 42px rgba(0, 0, 0, 0.25);
+  background:
+    linear-gradient(180deg, var(--glass), rgba(0, 0, 0, 0.03)),
+    var(--panel);
+  box-shadow:
+    inset 0 1px 0 rgba(236, 239, 234, 0.05),
+    0 0 38px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px);
 }
 
 .boot-panel {
@@ -249,11 +267,16 @@ p {
 .media-grid figure {
   min-width: 0;
   border: 1px solid rgba(48, 63, 82, 0.58);
-  background: var(--panel-strong);
+  background:
+    linear-gradient(180deg, rgba(236, 239, 234, 0.04), rgba(0, 0, 0, 0.02)),
+    var(--panel-strong);
 }
 
 .terminal-card {
   overflow: hidden;
+  box-shadow:
+    inset 0 0 18px rgba(236, 239, 234, 0.025),
+    0 0 18px rgba(0, 0, 0, 0.14);
 }
 
 .boot-widgets {
@@ -266,8 +289,8 @@ p {
   padding: 16px;
   border: 1px solid rgba(154, 105, 43, 0.5);
   background:
-    linear-gradient(135deg, rgba(154, 105, 43, 0.09), transparent 54%),
-    rgba(16, 19, 26, 0.96);
+    linear-gradient(135deg, rgba(226, 164, 93, 0.12), transparent 54%),
+    rgba(31, 33, 35, 0.9);
 }
 
 .weather-topline {
@@ -313,7 +336,9 @@ p {
   min-height: 36px;
   padding: 0 12px;
   border-bottom: 1px solid rgba(48, 63, 82, 0.58);
-  background: rgba(27, 63, 112, 0.4);
+  background:
+    linear-gradient(90deg, rgba(134, 171, 201, 0.26), rgba(70, 91, 112, 0.16)),
+    rgba(36, 45, 53, 0.64);
 }
 
 .terminal-bar span {
@@ -336,7 +361,7 @@ p {
 .terminal-bar b {
   max-width: 55%;
   margin-left: auto;
-  color: var(--muted);
+  color: #bdc4c2;
   font-size: 0.75rem;
   font-weight: 400;
   overflow: hidden;
@@ -351,7 +376,9 @@ p {
   padding: 18px;
   color: var(--text);
   font-size: 0.9rem;
+  line-height: 1.45;
   list-style: none;
+  text-shadow: 0 0 10px rgba(236, 239, 234, 0.1);
 }
 
 #boot-log li {
@@ -597,6 +624,7 @@ dd {
   overflow-x: auto;
   color: var(--text);
   line-height: 1.7;
+  text-shadow: 0 0 10px rgba(236, 239, 234, 0.08);
 }
 
 .note-panel,
