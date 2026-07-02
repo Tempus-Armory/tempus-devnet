@@ -15,7 +15,7 @@ const weatherWind = document.querySelector("#weather-wind");
 const weatherAir = document.querySelector("#weather-air");
 const weatherAdvisory = document.querySelector("#weather-advisory");
 
-const DISTRICT_STORAGE_KEY = "tempus-net-weather-district";
+const DISTRICT_STORAGE_KEY = "veyrindex-weather-district";
 const WEATHER_DISTRICTS = [
   {
     name: "Watson relay",
@@ -172,11 +172,14 @@ function runCommand(command) {
   }
 
   if (normalized.includes("release")) {
-    return "No public packages staged. Framework builds remain quarantined.";
+    return "No public VEYR packages staged. Systems builds remain quarantined.";
   }
 
-  if (normalized.includes("armory") || normalized.includes("weapon")) {
-    return "Armory index online: XCR-L, MP5K, AUG A3 records available.";
+  if (
+    normalized.includes("veyrframe") ||
+    normalized.includes("weapon")
+  ) {
+    return "VEYRFRAME index online: XCR-L, MP5K, AUG A3 records available.";
   }
 
   if (normalized.includes("simd")) {
@@ -184,7 +187,7 @@ function runCommand(command) {
   }
 
   if (normalized.includes("tac")) {
-    return "Tactical stance research online. Calibration pipeline marked prototype stable.";
+    return "VEYRSYSTEMS tactical stance research online. Calibration pipeline marked prototype stable.";
   }
 
   return `Unknown command: ${command}. Access level GUEST has opinions, not miracles.`;
@@ -200,7 +203,7 @@ function appendBootSuccess() {
 
   successLine.className = "boot-success";
   prefix.className = "boot-success-prefix";
-  prefix.textContent = "> TEMPUS_NET: ";
+  prefix.textContent = "> VEYRINDEX: ";
   clearance.className = "boot-success-type is-typing";
   clearance.setAttribute("aria-label", message);
 

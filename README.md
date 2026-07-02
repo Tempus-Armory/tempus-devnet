@@ -1,13 +1,27 @@
-# TEMPUS_NET
+# VEYRINDEX
 
-Static devsite prototype for the Tempus armory archive.
+Static devsite prototype for the VEYR COLLECTIVE public archive.
 
 ## Purpose
 
-TEMPUS_NET is the public signal for Tempus Industries: a blacksite-styled
-devnet for field logs, framework notes, redacted weapon records, release
-signals, and whatever useful chrome survives testing long enough to face the
-street.
+VEYRINDEX is the public signal for VEYR COLLECTIVE: a blacksite-styled devnet
+for field logs, VEYRFRAME records, VEYRSYSTEMS notes, VEYRGLASS experiments,
+release signals, and whatever useful chrome survives testing long enough to
+face the street.
+
+## Collective Map
+
+```text
+VEYR COLLECTIVE
+├── VEYRFRAME
+│   Weapons, platforms, attachments, animation packages
+├── VEYRSYSTEMS
+│   Frameworks, scripts, calibration, shared infrastructure
+├── VEYRGLASS
+│   Materials, coatings, cybernetics, CrystalCoat
+└── VEYRINDEX
+    Development records, field logs, prototypes, incident reports
+```
 
 ## Structure
 
@@ -22,4 +36,4 @@ docs/
 ## Content Rules
 
 - Public: devlogs, showcases, redacted field records, release pages.
-- Private: unstable framework code, internal research notes, working paths.
+- Private: unstable systems code, internal research notes, working paths.
