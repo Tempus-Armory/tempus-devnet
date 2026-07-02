@@ -194,9 +194,35 @@ function appendBootSuccess() {
   if (!bootLog || bootLog.querySelector(".boot-success")) return;
 
   const successLine = document.createElement("li");
+  const prefix = document.createElement("span");
+  const clearance = document.createElement("span");
+  const message = "security clearance granted";
+
   successLine.className = "boot-success";
-  successLine.textContent = "> TEMPUS_NET handshake complete";
+  prefix.className = "boot-success-prefix";
+  prefix.textContent = "> TEMPUS_NET: ";
+  clearance.className = "boot-success-type is-typing";
+  clearance.setAttribute("aria-label", message);
+
+  successLine.append(prefix, clearance);
   bootLog.append(successLine);
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    clearance.textContent = message;
+    clearance.classList.remove("is-typing");
+    return;
+  }
+
+  let cursor = 0;
+  const typeTimer = window.setInterval(() => {
+    cursor += 1;
+    clearance.textContent = message.slice(0, cursor);
+
+    if (cursor >= message.length) {
+      window.clearInterval(typeTimer);
+      clearance.classList.remove("is-typing");
+    }
+  }, 38);
 }
 
 updateClock();
