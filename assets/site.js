@@ -7,6 +7,7 @@ const sections = links
 const form = document.querySelector("#command-form");
 const input = document.querySelector("#command-input");
 const output = document.querySelector("#command-output");
+const bootLog = document.querySelector("#boot-log");
 
 function updateClock() {
   const now = new Date();
@@ -66,10 +67,22 @@ function runCommand(command) {
   return `Unknown command: ${command}. Access level GUEST has opinions, not miracles.`;
 }
 
+function appendBootSuccess() {
+  if (!bootLog || bootLog.querySelector(".boot-success")) return;
+
+  const successLine = document.createElement("li");
+  successLine.className = "boot-success";
+  successLine.textContent = "> TEMPUS_NET handshake complete";
+  bootLog.append(successLine);
+}
+
 updateClock();
 updateActiveLink();
 setInterval(updateClock, 1000);
 window.addEventListener("scroll", updateActiveLink, { passive: true });
+window.addEventListener("load", () => {
+  window.setTimeout(appendBootSuccess, 650);
+});
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
