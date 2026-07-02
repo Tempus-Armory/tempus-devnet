@@ -4,9 +4,10 @@ Static devsite prototype for the Tempus armory archive.
 
 ## Purpose
 
-TEMPUS_NET is the public-facing home for Tempus development logs, showcases,
-framework notes, screenshots, and eventual release mirrors. It is not an asset
-dump and should not contain extracted vanilla game assets.
+TEMPUS_NET is the public signal for Tempus Industries: a blacksite-styled
+devnet for field logs, framework notes, redacted weapon records, release
+signals, and whatever useful chrome survives testing long enough to face the
+street.
 
 ## Structure
 
@@ -15,12 +16,10 @@ index.html
 assets/
   styles.css
   site.js
-  media/
-    feeds/
 docs/
 ```
 
 ## Content Rules
 
-- Public: devlogs, screenshots, original notes, release pages.
+- Public: devlogs, showcases, redacted field records, release pages.
 - Private: unstable framework code, internal research notes, working paths.
