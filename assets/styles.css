@@ -15,8 +15,25 @@
   --red: #b86158;
   --shadow: rgba(119, 151, 178, 0.26);
   --glass: rgba(226, 234, 238, 0.05);
-  --mono: "Glass TTY VT220", "Glass TTY", "VT323", "DEC Terminal Modern",
-    "Px437 IBM VGA 8x16", "Cascadia Mono", "Consolas", "Lucida Console", monospace;
+  --mono: "Terminess Nerd Font Mono", "Glass TTY VT220", "Glass TTY", "VT323",
+    "DEC Terminal Modern", "Px437 IBM VGA 8x16", "Cascadia Mono", "Consolas",
+    "Lucida Console", monospace;
+}
+
+@font-face {
+  font-family: "Terminess Nerd Font Mono";
+  src: url("fonts/TerminessNerdFontMono-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Terminess Nerd Font Mono";
+  src: url("fonts/TerminessNerdFontMono-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
 
 * {
@@ -61,12 +78,10 @@ body::before {
       transparent 1px,
       transparent 4px
     ),
-    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.14) 0 1px, transparent 1.4px),
-    radial-gradient(circle at 72% 48%, rgba(255, 255, 255, 0.09) 0 1px, transparent 1.5px),
-    radial-gradient(circle at 42% 78%, rgba(0, 0, 0, 0.2) 0 1px, transparent 1.6px);
-  background-size: auto, 3px 3px, 5px 5px, 7px 7px;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' opacity='0.62' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: auto, 180px 180px;
   mix-blend-mode: screen;
-  opacity: 0.28;
+  opacity: 0.24;
 }
 
 body::after {
