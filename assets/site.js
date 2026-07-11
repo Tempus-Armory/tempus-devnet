@@ -168,7 +168,7 @@ function runCommand(command) {
   const normalized = command.trim().toLowerCase();
 
   if (!normalized) {
-    return "No command entered. Terminal refuses to hallucinate intent.";
+    return "No command entered. Awaiting operator input.";
   }
 
   if (normalized.includes("release")) {
@@ -190,7 +190,7 @@ function runCommand(command) {
     return "VEYRSYSTEMS tactical stance research online. Calibration pipeline marked prototype stable.";
   }
 
-  return `Unknown command: ${command}. Access level GUEST has opinions, not miracles.`;
+  return `Unknown command: ${command}. Guest access cannot execute that request.`;
 }
 
 function appendBootSuccess() {

@@ -1,10 +1,10 @@
 # VEYRINDEX
 
-Static devsite prototype for the VEYR COLLECTIVE public archive.
+Static blacksite devsite for the VEYR COLLECTIVE public archive.
 
 ## Purpose
 
-VEYRINDEX is the public signal for VEYR COLLECTIVE: a blacksite-styled devnet
+VEYRINDEX is the public signal for VEYR COLLECTIVE: a blacksite-styled Dev_Net
 for field logs, VEYRFRAME records, VEYRSYSTEMS notes, VEYRGLASS experiments,
 release signals, and whatever useful chrome survives testing long enough to
 face the street.

@@ -1,4 +1,4 @@
-name: Deploy TEMPUS_NET
+name: Deploy VEYR DEV_NET
 
 on:
   push:
